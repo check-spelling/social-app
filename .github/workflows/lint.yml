@@ -18,6 +18,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Yarn install
         run: yarn
+      - name: Add reporter
+        run: echo "::add-matcher::.github/actions/lint/yarn-reporter.json"
       - name: Typescript & Lint check
         run: yarn lint
   testing:
